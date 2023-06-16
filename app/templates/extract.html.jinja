@@ -1,0 +1,14 @@
+{% extends "base.html.jinja" %}
+
+{% block content %}   
+ 
+    <main class="container col-6 mt-5">
+            <form  class="input-group mb-3 " action="/product" method="get">
+                <input type="submit" class="btn btn-outline-secondary" id="button-addon1" value="Wyślij">
+                <input name="product_id" type="text" class="form-control" placeholder="Product ID" aria-label="Example text with button addon" aria-describedby="button-addon1" required>
+                
+            </form>
+ 
+    </main>
+
+{% endblock content %}

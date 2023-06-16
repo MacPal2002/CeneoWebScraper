@@ -1,0 +1,95 @@
+{% extends "base.html.jinja" %}
+
+{% block content %}
+    
+<main class="container pt-5 w-100 d-flex justify-content-center">
+    <table id="example" class="w-100 table table-striped table-bordered table-responsive text-wrap">
+        <thead>
+            <tr>
+                <th>Nazwa produktu</th>
+                <th>Liczba opinii</th>
+                <th>Liczba wad</th>
+                <th>Liczba zalet</th>
+                <th>Średnia ocena</th>
+                <th>Dane</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <a href="/product?klocki" rel="noopener noreferrer">Klocki Lego</a>
+                </td>
+                <td>120</td>
+                <td>1</td>
+                <td>34</td>
+                <td>5</td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pobierz
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">CSV</a></li>
+                            <li><a class="dropdown-item" href="#">XLSX</a></li>
+                            <li><a class="dropdown-item" href="#">JSON</a></li>
+                        </ul>
+                        </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/product?klocki" rel="noopener noreferrer">Klocki Lego</a>
+                </td>
+                <td>2</td>
+                <td>21</td>
+                <td>2</td>
+                <td>1</td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pobierz
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">CSV</a></li>
+                            <li><a class="dropdown-item" href="#">XLSX</a></li>
+                            <li><a class="dropdown-item" href="#">JSON</a></li>
+                        </ul>
+                        </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/product?klocki" rel="noopener noreferrer">Klocki Lego</a>
+                </td>
+                <td>56</td>
+                <td>34</td>
+                <td>6</td>
+                <td>4</td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pobierz
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">CSV</a></li>
+                            <li><a class="dropdown-item" href="#">XLSX</a></li>
+                            <li><a class="dropdown-item" href="#">JSON</a></li>
+                        </ul>
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+
+{% endblock content %}
+    
+{% block scripts %}
+    <script>
+       $(document).ready(function () {
+            $('#example').DataTable();
+            
+        });
+    </script>
+
+{% endblock scripts %}
